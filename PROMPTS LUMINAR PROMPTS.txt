@@ -1,3 +1,5 @@
+"NOT WORKING" -- NEED A REFINED MODEL
+
 
 #####MASTER SYSTEM PROMPT (PASTE FIRST)#######
 
@@ -261,6 +263,7 @@ Evaluate LUMINA on:
 Then:
 - Suggest 3 killer improvements that are doable in 24 hours
 - Suggest 1 demo flow that will impress judges
+
 
 
 
