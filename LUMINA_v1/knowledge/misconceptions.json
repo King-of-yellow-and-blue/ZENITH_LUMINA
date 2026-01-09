@@ -1,0 +1,24 @@
+{
+  "Velocity": [
+    {
+      "misconception": "Velocity and speed are the same",
+      "correction": "Speed has only magnitude, while velocity has both magnitude and direction."
+    },
+    {
+      "misconception": "Negative velocity means the object is slowing down",
+      "correction": "Negative velocity indicates direction, not reduction in speed."
+    }
+  ],
+  "Acceleration": [
+    {
+      "misconception": "Acceleration only means increase in speed",
+      "correction": "Acceleration is change in velocity, which can involve change in speed, direction, or both."
+    }
+  ],
+  "Distance": [
+    {
+      "misconception": "Distance and displacement are always equal",
+      "correction": "Distance is total path length, while displacement is the shortest straight-line distance."
+    }
+  ]
+}

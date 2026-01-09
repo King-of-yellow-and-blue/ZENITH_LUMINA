@@ -1,0 +1,31 @@
+{
+  "Class 9": {
+    "Physics": {
+      "Motion": [
+        "Distance",
+        "Displacement",
+        "Speed",
+        "Velocity",
+        "Acceleration",
+        "Equations of Motion"
+      ]
+    },
+    "Mathematics": {
+      "Number Systems": [
+        "Real Numbers",
+        "Rational Numbers",
+        "Irrational Numbers"
+      ]
+    }
+  },
+  "Class 11": {
+    "Physics": {
+      "Kinematics": [
+        "Position Vector",
+        "Velocity",
+        "Acceleration",
+        "Equations of Motion"
+      ]
+    }
+  }
+}
