@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LUMINA</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>LUMINA</h1>
+<p>Enter a topic. No prompts required.</p>
+
+<input id="topicInput" placeholder="e.g. Velocity" />
+<button onclick="askLumina()">Ask</button>
+
+<pre id="output"></pre>
+
+<script>
+let currentTopic = "";
+let selectedContext = null;
+
+async function askLumina() {
+    currentTopic = document.getElementById("topicInput").value;
+    selectedContext = null;
+
+    const res = await fetch(`/ask?topic=${currentTopic}`);
+    const data = await res.json();
+    renderResponse(data);
+}
+
+async function selectContext(choice) {
+    selectedContext = choice;
+    const res = await fetch(`/ask?topic=${currentTopic}&context=${choice}`);
+    const data = await res.json();
+    renderResponse(data);
+}
+
+function renderResponse(data) {
+    const out = document.getElementById("output");
+    out.innerHTML = "";
+
+    if (data.clarification) {
+        out.innerHTML += `<h3>${data.clarification.question}</h3>`;
+        data.clarification.choices.forEach(c => {
+            out.innerHTML += `
+              <button onclick="selectContext(${c.id})">
+                ${c.class} – ${c.chapter}
+              </button><br>`;
+        });
+        return;
+    }
+
+    if (data.bridge_course) {
+        out.innerHTML += `<h3>Bridge Course Required</h3>`;
+        data.bridge_course.modules.forEach(m => {
+            out.innerHTML += `<p>• ${m.topic} (${m.duration})</p>`;
+        });
+
+        out.innerHTML += `
+            <button onclick="continueAfterBridge()">
+                Continue to Main Topic
+            </button>
+        `;
+        return;
+    }
+
+
+    if (data.explanation_prompt) {
+        out.innerHTML += `<h3>Explanation</h3>`;
+        out.innerHTML += `<pre>${data.explanation_prompt}</pre>`;
+        out.innerHTML += `
+          <button onclick="startDebugger()">Debugger Mode</button>
+        `;
+    }
+}
+
+async function startDebugger() {
+    const res = await fetch(`/ask?topic=${currentTopic}&mode=DEBUGGER`);
+    const data = await res.json();
+
+    const out = document.getElementById("output");
+    out.innerHTML = `<h3>Debugger Mode</h3>`;
+
+    data.debugger.questions.forEach(q => {
+        out.innerHTML += `<p>• ${q}</p>`;
+    });
+}
+
+async function continueAfterBridge() {
+    const knownTopics = ["Distance", "Time"];
+
+    let url = `/ask?topic=${currentTopic}&known=${knownTopics.join(",")}`;
+
+    // 🔑 CRITICAL FIX: resend context
+    if (selectedContext) {
+        url += `&context=${selectedContext}`;
+    }
+
+    const res = await fetch(url);
+    const data = await res.json();
+
+    renderResponse(data);
+}
+
+
+</script>
+
+
+</body>
+</html>
