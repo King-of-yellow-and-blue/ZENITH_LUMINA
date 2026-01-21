@@ -1,0 +1,278 @@
+"NOT WORKING" -- NEED A REFINED MODEL
+
+
+#####MASTER SYSTEM PROMPT (PASTE FIRST)#######
+
+You are a senior AI engineer and hackathon mentor.
+
+You are helping me build an AI tutor called LUMINA.
+
+Rules:
+- Use ONLY free and open-source tools
+- No paid APIs (no OpenAI, no Anthropic)
+- Use Python, Streamlit, Ollama, FAISS, SentenceTransformers
+- Code must be runnable on a local laptop
+- No pseudocode — only complete working code
+- Modular, clean architecture
+- Explain briefly, but focus on code
+- Assume I will integrate files manually
+
+Goal:
+Build an AI tutor that:
+1. Checks conceptual readiness using prerequisite graphs
+2. Adapts explanation to cognitive style
+3. Detects and prevents misconceptions
+4. Debugs understanding step-by-step
+5. Uses RAG for factual grounding
+
+Confirm understanding, then wait for my first module request.
+
+
+
+
+MODULE-WISE CODE PROMPTS (CORE)
+🔹 A. Project Skeleton
+Create the full project folder structure for LUMINA.
+
+Include:
+- app.py (Streamlit UI)
+- core/ (all logic)
+- rag/ (RAG pipeline)
+- models/ (LLM wrapper)
+- prompts/
+- data/
+- requirements.txt
+
+Output:
+- Folder tree
+- Empty file list
+- Brief purpose of each file
+
+
+
+
+
+
+
+
+
+B. Open-Source LLM Wrapper (CRITICAL)
+Write models/llm.py.
+
+Requirements:
+- Use Ollama CLI
+- Use Mistral or LLaMA 3
+- Function: run_llm(prompt: str) -> str
+- Handle long prompts safely
+- No async, keep simple
+- Must work on Windows
+
+Give full code only.
+
+
+
+
+
+C. Learning Path Intelligence (Readiness Checker)
+Write core/readiness_checker.py.
+
+Requirements:
+- Load prerequisite graph from data/concepts.json
+- Input: concept name, list of known concepts
+- Output:
+  - ready: boolean
+  - missing_prerequisites: list
+- No AI here — pure logic
+- Add clear docstrings
+
+Give complete code.
+
+
+
+
+
+D. Explain Like My Brain Engine
+Write core/explain_engine.py.
+
+Requirements:
+- Accept concept + explanation_mode
+- Modes: Analogy, Math, Visual
+- Load prompt template from prompts/explanation.txt
+- Use run_llm()
+- Explanation must assume readiness is satisfied
+- Return clean formatted text
+
+Give full code + prompt file.
+
+
+
+
+
+
+
+
+🔹 E. Misconception Detection (PROACTIVE + REACTIVE)
+Write core/misconception.py.
+
+Requirements:
+- Load common misconceptions from data/misconceptions.json
+- Input: concept, student answer
+- Detect:
+  - Whether misconception exists
+  - Which misconception
+  - Root cause
+- Use LLM for reasoning
+- Return structured text
+
+Provide:
+- Python file
+- Sample misconceptions.json
+
+
+
+
+
+
+🔹 F. Concept Debugger Mode ⭐⭐⭐
+Write core/debugger.py.
+
+Requirements:
+- Break a concept into atomic assumptions
+- Test assumptions sequentially
+- Stop at first faulty assumption
+- Explain WHY it is wrong
+- Use a strict debugger-style prompt
+- Do NOT explain whole concept at once
+
+Provide:
+- Python code
+- prompts/debugger.txt
+
+
+
+
+🔹 G. Confidence–Correctness Analyzer
+Write core/confidence.py.
+
+Requirements:
+- Input: confidence score (0–1), correctness (bool)
+- Output learning risk category:
+  - Dangerous misconception
+  - Fragile understanding
+  - Healthy understanding
+- Pure logic (no LLM)
+- Simple and explainable
+
+Provide full code.
+
+
+
+
+
+
+
+🔹 H. RAG Pipeline (FAISS)
+Write rag/vector_store.py and rag/retriever.py.
+
+Requirements:
+- Use SentenceTransformers (MiniLM)
+- Use FAISS
+- Functions:
+  - add_documents(text_list)
+  - retrieve(query, top_k)
+- Store documents in memory
+- No cloud, no database
+
+Give full working code.
+
+
+
+
+
+
+🔹 I. Streamlit UI (MAIN APP)
+Write app.py.
+
+Requirements:
+- Streamlit UI
+- Inputs:
+  - Concept name
+  - Known concepts
+  - Explanation mode
+- Buttons:
+  - Check Readiness
+  - Explain
+  - Debug My Understanding
+- Display outputs clearly
+- No fancy CSS, clarity first
+
+Give full runnable app.py.
+
+
+
+
+INTEGRATION PROMPTS (IMPORTANT)
+
+After assembling files:
+
+Review all LUMINA modules.
+
+Tasks:
+- Verify imports
+- Fix path issues
+- Ensure Streamlit runs without error
+- Ensure Ollama calls work
+- Ensure no missing dependencies
+
+List:
+1. Bugs found
+2. Exact fixes
+3. Final run instructions
+
+
+
+
+
+
+4️⃣ TESTING PROMPTS (JUDGES LOVE THIS)
+Act as a student using LUMINA.
+
+Test cases:
+1. Missing prerequisite
+2. Correct but low confidence
+3. Wrong but high confidence
+4. Common misconception
+5. Debugger mode failure case
+
+Simulate inputs and expected outputs.
+
+
+
+
+
+5️⃣ FINAL POLISH (HACKATHON WINNING)
+You are an IIT hackathon judge.
+
+Evaluate LUMINA on:
+- Originality
+- Technical depth
+- Feasibility
+- AI correctness
+- Educational value
+
+Then:
+- Suggest 3 killer improvements that are doable in 24 hours
+- Suggest 1 demo flow that will impress judges
+
+
+
+
+
+
+
+
+
+
+
+
+
