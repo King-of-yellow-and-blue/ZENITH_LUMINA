@@ -1,0 +1,126 @@
+Your task is to build an AI model within the Ed-Tech industry domain. As an expert in the same industry, you have to make the model according to your experience, along with the following requirements being included in it.
+
+Your task is to thoroughly analyse the following Objectives and, according to your own vast knowledge and experience, refine, rebuild, add or remove. In short, do whatever you like to do with the below objectives and at last, provide me with around 10 REAL Features a.k.a. Objects that would make LUMINA a world-class a.k.a. an International Level AI MODEL.
+
+Your task is to build a prototype for an AI Agent that satisfies all the requirements mentioned below. Provide me with all the code files separately, with the order in which I will have to place the code files in my VS code studio so that the prototype works perfectly fine in my system.
+
+
+You are an expert AI developer with specialisation in building AI Models and AI Agents in the Ed-Tech Industry, and with decades of experience in the same.
+Below are the requirements I want in my AI Agent. Considering that I have zero knowledge in AI, give me a step-by-step guide on how to build this from scratch without missing even the smallest details. Including all the sources I will have to use in order to collect data, like RAG or something else, every code file, every platform I will have to use including the steps on how I will surf the platform, everything like literally give me the step-by-step guide of everything without missing even the smallest details. But keep in mind this specific thing that we are building this with "ZERO" cost, I have Chat-GPT go and Gemini Pro. Other that this i don't have any subscriptions and i am also not willing to take any.
+
+NAME:- LUMINA — (Learning, Understanding & Mastery through Intelligent Neural Architecture)
+PROBLEM: Other AI systems require prompts, but this one doesn't. It only requires you to input the Topics.
+
+OBJECTIVE:-
+1)DEFAULT
+"Learning Path"
+-->User Inputs
+-Class:
+-Subject:
+-Chapter:
+-Topic/Question:
+
+2)"Prevents learning advanced topics with missing foundations"
+Prerequisite of the given topic + Study order of the same
+
+-->NOTE: For Short Explanations, "Default Route"  and for Long Explanations, only one of the Three Ways will be chosen by the user(Alternate Route)
+
+3)Three Ways of Output
+"Adapts explanations to cognitive style"
+-->Provides Explanation in TWO different ways:- "Analogy(Text based) and Visual"  FOR Non-Mathematical Topics
+-->Provides Explanation in THREE different ways:- "Analogy(Text based), Mathematical Way and Visual(Selective)"  FOR Mathematical Topics
+
+4)"Misconception Detection"
+-->Common Doubts of Students with Solution
+
+##5)Optional ##
+##-->Minor Q&A with user at the end to check Confidence and Understanding ##
+
+6)"A WHOLE Another MODE of the AI MODEL"  -->  (Unique)
+-->For those USERS whose 'preparation' is already done.
+-->“This is a debugger for thinking.”
+
+7)Add Flashcard, Mind-Map.
+
+
+
+############################################################################################################################
+You are an expert AI developer with specialisation in building AI Models and AI Agents in the Ed-Tech Industry, and with decades of experience in the same.
+
+Your task is to build a prototype for an AI Agent that satisfies all the requirements mentioned below. Provide me with all the code files separately with the order in which I will have to place the code files in my VS code studio so that the prototype works perfectly fine in my system.
+
+
+
+NAME:- LUMINA — (Learning, Understanding & Mastery through Intelligent Neural Architecture)
+
+Phase 1: Architectural Refinement & Critique
+1. The "Anchor" Protocol
+Implement Dynamic Syllabus Mapping. If a user inputs "Gravity," LUMINA should just ask "Class 9 or 11?" It should look at the user's past behaviour or offer a "Knowledge Assessment".
+
+2. The "Foundation Guardrail"
+Dependency Graph Navigation. If a user asks about "Integration" but lacks "Trigonometry" skills, LUMINA generates a "Bridge Course"—a 5-minute micro-module to patch the specific gap needed for the advanced topic, rather than blocking them completely.
+
+3. The "Cognitive Morphing" Engine
+Multi-Modal Synthesis.
+Text: Uses LLMs (like Gemini/GPT-4) for analogies.
+Visual: Uses Generative Models (like Stable Diffusion) to create unique diagrams for that specific analogy along with fetching generic ones.
+Math: Uses a Symbolic Computation Engine (like Wolfram Alpha logic) to ensure steps are 100% accurate, avoiding LLM "hallucinations" in math.
+
+4. The "Socratic Adversary" (Refining "The Debugger Mode")
+This mode switches the System Prompt from "Helpful Tutor" to "Critical Peer." It challenges the user's logic to expose weak arguments or shallow understanding.
+
+---
+
+Phase 2: The 10 "REAL" Features for World-Class Status
+To compete internationally, LUMINA needs these specific components (Objects) in its codebase.
+
+##1. The Dynamic Knowledge Graph (The Brain)
+Instead of linear databases, LUMINA is built on a Knowledge Graph. This connects concepts (e.g., "Photosynthesis" is connected to "Sunlight," "Chlorophyll," and "Energy").
+Why it's world-class: It allows the AI to "know" that if a student fails a question on Energy, they might struggle with Photosynthesis next. It powers the "Foundation Guardrail."
+
+####2. The "Feynman" Simulator (Active Recall)####
+A feature where the User teaches the AI.
+How it works: The user speaks or types an explanation of the topic. LUMINA analyses the explanation, identifies gaps, and rates the teaching.
+Why it's world-class: Teaching is the highest form of learning. No standard chatbot does this effectively.
+
+########3. Real-Time Cognitive Load Balancer##########(If we want to upgrade Debugger(Optional))
+The AI analyses the user's response time and error rate.
+Function: If the user is answering quickly and correctly, LUMINA increases complexity (dials up the vocabulary/math). If the user slows down or clicks "Hint" often, it simplifies the next explanation instantly.
+Why it's world-class: It keeps the user in the "Flow State"—neither bored nor overwhelmed.
+
+4. The "Misconception Hunter" (Predictive Error Analysis)
+Instead of just "Common Doubts," use a database of frequent student errors.
+Function: Before teaching a topic like "Newton's Third Law," LUMINA explicitly warns: "Most students think action and reaction cancel each other out. Here is why that is wrong..."
+Why it's world-class: It proactively fixes bugs in student thinking before they settle in.
+
+5. Generative "Analogy-to-Visual" Engine
+Combining Visual and Analogy Learning paths.
+Why it's world-class: It aligns the visual modality perfectly with the text modality, reducing cognitive dissonance.
+
+6. The "Socratic" Debugger (Conversation Mode)
+This is your "Mode 6." The AI asks Why? five times.
+Function: User: "Gravity pulls things down."
+	LUMINA: "What defines 'down' in space?"
+	User: "Towards the centre."
+	LUMINA: "Centre of what? Does the moon fall 'down'?"
+Why it's world-class: It builds critical thinking, not just rote memorisation.
+
+7. Automated "Spaced Repetition" Scheduler (SRS)
+LUMINA tracks every topic the user has learned.
+Function: It automatically schedules a "Flashcard Pop-up" for that topic 1 day later, 3 days later, and 7 days later, based on the **Forgetting Curve**.
+Why it's world-class:** It guarantees long-term retention without the user needing to manage a schedule.
+
+8. Multimodal "Doubt Snap"(Computing Cost ko madte nazar rakhte hue)
+Function: The user can snap a photo of a textbook paragraph or a handwritten equation. LUMINA reads it (OCR), understands the context, and explains *that specific part.
+Why it's world-class: It bridges the physical study world with the digital AI world.
+
+######9. Gamified Mastery Trees (Visual Progress) (For upgrade purpose, at the END)#######
+Function: Instead of a list of chapters, show a "Skill Tree" (like in video games). Nodes light up as "Mastered" only when the user passes the "Debugger" mode.
+Why it's world-class: It provides dopamine hits and visual proof of competence.
+
+10. Sentiment-Aware Responses (Silent Feature)
+Function: If the user uses frustrated language ("I don't get this", "This is stupid"), LUMINA detects the sentiment.
+Response: It shifts tone: "It's okay, this is a tough concept. Let's take a break and try a simpler example."
+Why it's world-class: It adds Empathy, the missing link in AI tutoring.
+
+---
